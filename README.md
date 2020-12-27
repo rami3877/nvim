@@ -16,3 +16,5 @@
 # setp open like :
                    https://www.chrisatmachine.com/Neovim/04-vim-coc/
                    :CocList marketplace
+                   mkdir -p ~/.config/nvim/undo
+
