@@ -10,7 +10,7 @@
 # setp2 open init.vim:
                       :so %
                       :PlugInstall 
-                      :CocInstall coc-json coc-tsserver  coc-python coc-snippets coc-vimlsp
+                      :CocInstall coc-json coc-tsserver  coc-python coc-snippets coc-vimlsp  coc-marketplace
                       :CocConfig
 # setp open like :
                    https://www.chrisatmachine.com/Neovim/04-vim-coc/
