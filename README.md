@@ -1,1 +1,10 @@
 # nvim
+
+# setp 1 :
+          su 
+          curl -sL install-node.now.sh/lts | bash
+          sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+          https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+# setp2 open init.vim:
+                      :so %
+                      :PlugInstall         
