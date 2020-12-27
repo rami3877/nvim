@@ -1,7 +1,7 @@
 # nvim
 
 # setp 1 :
-          sudo pacman -S python-pynvim neovim
+          sudo pacman -S python-pynvim neovim ctags
           su 
           curl -sL install-node.now.sh/lts | bash
           exit
