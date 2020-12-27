@@ -17,4 +17,6 @@
                    https://www.chrisatmachine.com/Neovim/04-vim-coc/
                    :CocList marketplace
                    mkdir -p ~/.config/nvim/undo
-
+# for change the format output of lexima.vim :
+                   nvim ~/.config/nvim/plugg/lexima.vim/autoload/lexima.vim
+                   :39
