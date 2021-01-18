@@ -2,6 +2,7 @@
 
 # setp 1 :
           sudo pacman -S python-pynvim neovim ctags git 
+          sudo npm i -g yarn  
           su 
           curl -sL install-node.now.sh/lts | bash
           exit
