@@ -27,7 +27,7 @@
                       
 # More information about coc open like :
                    https://www.chrisatmachine.com/Neovim/04-vim-coc/
-# To download for language server extension for coc.nvim
+# To download for language server extension  & Snippets extension for coc.nvim
                    :CocList marketplace
                
 # for change the format output of lexima.vim :
