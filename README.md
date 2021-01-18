@@ -10,7 +10,14 @@
           mkdir ~/.config/nvim  -p
           cd ~/.config/nvim
           git clone https://github.com/rami3877/nvim.git
-     
+   # to enable python2 & python3 for neovim  in archlinux 
+                    yay -S python2-pip 
+                    sudo pacman -S python2
+                    mkdir ~/.local/bin 
+                    ln -s /usr/bin/python2 ~/.local/bin/python2
+                    ln -s /usr/bin/python2-config ~/.local/bin/python2-config
+                    python3 -m pip install --user --upgrade pynvim 
+                    python2 -m pip install --user --upgrade pynvim 
 # setp2 open init.vim:
                       nvim init.vim
                       :so %
@@ -25,12 +32,5 @@
 # for change the format output of lexima.vim :
                    nvim ~/.config/nvim/plugg/lexima.vim/autoload/lexima.vim
                    :39
-# to enable python2 & python3 for neovim  in archlinux 
-                    yay -S python2-pip 
-                    sudo pacman -S python2
-                    mkdir ~/.local/bin 
-                    ln -s /usr/bin/python2 ~/.local/bin/python2
-                    ln -s /usr/bin/python2-config ~/.local/bin/python2-config
-                    python3 -m pip install --user --upgrade pynvim 
-                    python2 -m pip install --user --upgrade pynvim 
+
                     
