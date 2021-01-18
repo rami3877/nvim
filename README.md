@@ -13,22 +13,23 @@
    # to enable python2 & python3 for neovim  in archlinux 
                     yay -S python2-pip 
                     sudo pacman -S python2
-                    mkdir ~/.local/bin 
+                    mkdir ~/.local/bin -p
                     ln -s /usr/bin/python2 ~/.local/bin/python2
                     ln -s /usr/bin/python2-config ~/.local/bin/python2-config
                     python3 -m pip install --user --upgrade pynvim 
                     python2 -m pip install --user --upgrade pynvim 
-# setp2 open init.vim:
+#  open init.vim:
                       nvim init.vim
                       :so %
                       :PlugInstall 
                       :CocInstall coc-json coc-tsserver  coc-snippets   coc-marketplace
                       :CocConfig
                       
-# setp open like :
+# More information about coc open like :
                    https://www.chrisatmachine.com/Neovim/04-vim-coc/
+# To download for language server extension for coc.nvim
                    :CocList marketplace
-                   mkdir -p ~/.config/nvim/undo
+               
 # for change the format output of lexima.vim :
                    nvim ~/.config/nvim/plugg/lexima.vim/autoload/lexima.vim
                    :39
