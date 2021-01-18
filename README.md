@@ -25,7 +25,7 @@
                       nvim init.vim
                       :so %
                       :PlugInstall 
-                      :CocInstall coc-json coc-tsserver  coc-snippets   coc-marketplace
+                      :CocInstall coc-json coc-tsserver  coc-snippets   coc-marketplace coc-vimlsp
                       :CocConfig
                       
 # More information about coc open like :
