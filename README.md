@@ -1,14 +1,18 @@
 # nvim
 
 # setp 1 :
-          sudo pacman -S python-pynvim neovim ctags
+          sudo pacman -S python-pynvim neovim ctags git 
           su 
           curl -sL install-node.now.sh/lts | bash
           exit
           sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
           https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+          mkdir ~/.config/nvim  -p
+          cd ~/.config/nvim
+          git clone https://github.com/rami3877/nvim.git
      
 # setp2 open init.vim:
+                      nvim init.vim
                       :so %
                       :PlugInstall 
                       :CocInstall coc-json coc-tsserver  coc-snippets   coc-marketplace
