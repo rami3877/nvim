@@ -21,6 +21,7 @@
                     ln -s /usr/bin/python2-config ~/.local/bin/python2-config
                     python3 -m pip install --user --upgrade pynvim 
                     python2 -m pip install --user --upgrade pynvim 
+                    pip install jedi    
 #  open init.vim:
                       nvim init.vim
                       :so %
