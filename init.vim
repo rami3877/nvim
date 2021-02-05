@@ -12,10 +12,11 @@ Plug 'honza/vim-snippets'
 Plug 'ervandew/supertab'
 call plug#end()
 
-"setting vim 
+"setting vim
+set exrc
 set nocompatible
 set wildmenu "to enable menu :https://i.stack.imgur.com/hUXZv.png
-set laststatus=2 "show the bar in down
+"set laststatus=2 "show the bar in down
 "Function to toggle the mouse [Key = leader + m]
  function! ToggleMouse()
      "check if mouse is enabled
@@ -27,12 +28,13 @@ set laststatus=2 "show the bar in down
          set mouse=a
      endif
  endfunc
-syntax enable
+syntax on
 set encoding=utf-8
 filetype plugin indent on
 set nu "show number to left
+set relativenumber 
 set bs=2
-set cmdheight=2 "Give more space for displaying messages.
+"set cmdheight=2 "Give more space for displaying messages.
 
 " if you have a 256 color terminal if not use highlight ColorColumn ctermbg = 16
 highlight ColorColumn ctermbg=238
@@ -41,6 +43,8 @@ set hlsearch "it will enable the highlighting search matches ;for disable :nohls
 set incsearch "https://miro.medium.com/max/626/1*jP9h3BO_2uOHGe3N4lBkZA.gif
 set noswapfile
 set nowrapscan
+set nowrap
+set nohlsearch
 set showmatch "enable MatchParen
 "                       Color shading  Color pointer
 hi MatchParen cterm=none ctermbg=black ctermfg=blue
@@ -55,8 +59,8 @@ set updatetime=2000
 set foldmethod=manual
 set foldlevel=1
 
-autocmd BufWinLeave *.* mkview "to save folding 
-autocmd BufWinEnter *.* silent loadview "to load folding from file ~/.vim/view
+"autocmd BufWinLeave *.* mkview "to save folding 
+"autocmd BufWinEnter *.* silent loadview "to load folding from file ~/.vim/view
 "tagbar setting https://vimawesome.com/plugin/tagbar
 nmap <F8> :TagbarToggle<CR>
 nmap <F7> :TagbarOpenAutoClose<CR> 
@@ -70,7 +74,10 @@ nmap <F7> :TagbarOpenAutoClose<CR>
  let g:UltiSnipsEditSplit="vertical"
  let g:SuperTabDefaultCompletionType = '<C-n>' 
 
-
+""hi Pmenu guibg=#d7e5dc gui=NONE
+"hi PmenuSel guibg=#b7c7b7 gui=NONE
+"hi PmenuSbar guibg=#bcbcbc
+"hi PmenuThumb guibg=#585858
     
 
 "change key esc to `
@@ -79,3 +86,4 @@ imap ` <esc>
 vmap ` <esc>
 omap ` <esci>
 
+hi Pmenu ctermbg=black ctermfg=white
