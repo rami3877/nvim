@@ -36,5 +36,5 @@
 # for change the format output of lexima.vim :
                    nvim ~/.config/nvim/plugg/lexima.vim/autoload/lexima.vim
                    :39
-
-                    
+# wordes 
+          h coc-highlights
