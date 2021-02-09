@@ -13,6 +13,7 @@
           mkdir ~/.config/nvim  -p
           cd ~/.config/nvim
           git clone https://github.com/rami3877/nvim.git
+          export PATH=/home/rami/.gem/ruby/2.7.0/bin:$PATH   
    # to enable python2 & python3 for neovim  in archlinux 
                     yay -S python2-pip 
                     sudo pacman -S python2
