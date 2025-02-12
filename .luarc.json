@@ -1,0 +1,8 @@
+{
+    "diagnostics.globals": [
+        "daadasd"
+    ],
+    "diagnostics.disable": [
+        "undefined-global"
+    ]
+}

@@ -1,0 +1,12 @@
+all this command and function for lua api nvim
+vim.treesitter.language
+
+
+for hi 
+hi Comment	gui=bold
+
+
+vim.cmd [[ hi @function.builtin guifg=yellow]]
+
+:h ins-completion    
+lua vim.lsp.buf.format()
