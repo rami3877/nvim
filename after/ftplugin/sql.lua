@@ -82,31 +82,6 @@ vim.keymap.set('v', '<leader>r', function()
 		data = data:sub(1, #data - 1) .. "\\;"
 	end
 
-	vim.fn.input(data)
-
-
 	vim.fn.system([[tmux send-keys -t  ]] .. cmd_send_to_pane .. " \"" .. data .. "\" " .. "enter")
 end
 , { noremap = true })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
---
