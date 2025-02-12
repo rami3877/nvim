@@ -1,8 +1,12 @@
 {
     "diagnostics.globals": [
-        "daadasd"
+        "daadasd",
+        "split"
     ],
     "diagnostics.disable": [
-        "undefined-global"
+        "undefined-global",
+        "trailing-space",
+        "unused-local",
+        "empty-block"
     ]
 }
