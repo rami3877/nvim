@@ -63,10 +63,12 @@ vim.keymap.set('n', "<leader>r", function()
 	if data == "" or not data then
 		return
 	end
-	if data.sub(#data, #data) == ";" then
-		data = data.sub(1, #data - 1) .. "\\;"
+	if data:sub(#data, #data) == ";" then
+		data = data:sub(1, #data - 1) .. "\\;"
 	end
-	vim.fn.system([[tmux send-keys -t  ]] .. cmd_send_to_pane .. " \"" .. data .. "\" " .. "enter")
+
+
+	vim.fn.system([[tmux send-keys -t  ]] .. cmd_send_to_pane .. " \"" .. data .. "\" enter")
 end)
 
 
@@ -82,6 +84,7 @@ vim.keymap.set('v', '<leader>r', function()
 		data = data:sub(1, #data - 1) .. "\\;"
 	end
 
-	vim.fn.system([[tmux send-keys -t  ]] .. cmd_send_to_pane .. " \"" .. data .. "\" " .. "enter")
+
+	vim.fn.system([[tmux send-keys -t  ]] .. cmd_send_to_pane .. " \"" .. data .. "\"" .. " enter")
 end
 , { noremap = true })
