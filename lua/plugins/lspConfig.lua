@@ -22,14 +22,15 @@ return {
 
 			require("lspconfig").lua_ls.setup { capabilities = cap }
 
+			require("lspconfig").clangd.setup {
+				capabilities = cap
+			}
+
 			require 'lspconfig'.sqls.setup {
 				capabilities = cap,
 				on_attach = function(client, bufnr)
 					require('sqls').on_attach(client, bufnr) -- require sqls.nvim
 				end,
-			}
-			require 'lspconfig'.sqls.setup {
-				capabilities = cap
 			}
 			require 'lspconfig'.gopls.setup { capabilities = cap }
 			require 'lspconfig'.rust_analyzer.setup {
@@ -44,7 +45,7 @@ return {
 
 			}
 
-			--vim.diagnostic.enable(not vim.diagnostic.is_enabled())
+			vim.diagnostic.enable(not vim.diagnostic.is_enabled())
 			vim.api.nvim_create_autocmd('LspAttach', {
 				callback = function(args)
 					local client = vim.lsp.get_client_by_id(args.data.client_id)
@@ -63,12 +64,3 @@ return {
 	},
 
 }
-
-
---[[
-
-
-
-
-
-]]
