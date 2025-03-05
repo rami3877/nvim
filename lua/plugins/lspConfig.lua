@@ -19,6 +19,9 @@ return {
 		config = function()
 			local cap = require('blink.cmp').get_lsp_capabilities()
 
+			require("lspconfig").pyright.setup {
+				capabilities = cap
+			}
 
 			require("lspconfig").lua_ls.setup { capabilities = cap }
 
