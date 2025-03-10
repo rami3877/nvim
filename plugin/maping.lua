@@ -26,6 +26,9 @@ vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename)
 
 -- Neoformat
 --vim.keymap.set("n", "<leader>fm", "<cmd>Neoformat<CR>")
+vim.keymap.set("n", "<leader>fm", vim.lsp.buf.format)
+
+
 
 
 -- CommentToggle

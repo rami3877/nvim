@@ -16,11 +16,11 @@ opt.updatetime = 100
 opt.virtualedit = "block"
 opt.lazyredraw = true
 opt.wrap = false
-opt.tabstop = 2
+opt.tabstop = 4
 vim.opt.shiftwidth = 4
-opt.softtabstop = 2
+opt.softtabstop = 4
 opt.clipboard = "unnamedplus"
-
+vim.cmd([[set formatoptions-=cro]])
 opt.termguicolors = true
 vim.o.timeoutlen = 1000000
 -- Highlight Selection search off

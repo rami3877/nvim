@@ -25,27 +25,35 @@ require("option")
 
 require("lazy").setup({
 	spec = {
-			{ import = "plugins" },
-			{
-					"christoomey/vim-tmux-navigator",
-					cmd = {
-							"TmuxNavigateLeft",
-							"TmuxNavigateDown",
-							"TmuxNavigateUp",
-							"TmuxNavigateRight",
-							"TmuxNavigatePrevious",
-							"TmuxNavigatorProcessList",
-					},
-					keys = {
-							{ "<c-h>", "<cmd><C-U>TmuxNavigateLeft<cr>" },
-							{ "<c-j>", "<cmd><C-U>TmuxNavigateDown<cr>" },
-							{ "<c-k>", "<cmd><C-U>TmuxNavigateUp<cr>" },
-							{ "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
-							{ "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
-					},
+		{ import = "plugins" },
+		{
+			"christoomey/vim-tmux-navigator",
+			cmd = {
+				"TmuxNavigateLeft",
+				"TmuxNavigateDown",
+				"TmuxNavigateUp",
+				"TmuxNavigateRight",
+				"TmuxNavigatePrevious",
+				"TmuxNavigatorProcessList",
 			},
-			{ "ThePrimeagen/harpoon",          dependencies = { { "nvim-lua/plenary.nvim" } } },
-			{ "nvim-tree/nvim-web-devicons",   opts = {} },
+			keys = {
+				{ "<c-h>",  "<cmd><C-U>TmuxNavigateLeft<cr>" },
+				{ "<c-j>",  "<cmd><C-U>TmuxNavigateDown<cr>" },
+				{ "<c-k>",  "<cmd><C-U>TmuxNavigateUp<cr>" },
+				{ "<c-l>",  "<cmd><C-U>TmuxNavigateRight<cr>" },
+				{ "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
+			},
+		},
+		{ "ThePrimeagen/harpoon",        dependencies = { { "nvim-lua/plenary.nvim" } } },
+		{ "nvim-tree/nvim-web-devicons", opts = {} },
+		{
+			"test_python",
+			dir = "~/.config/nvim/my_plugin/test_python",
+			config = function()
+				local test_python = require("test_python")
+				-- test_python.run()
+			end,
+		},
 	},
 	install = { colorscheme = { "ayu-dark" } },
 })
